@@ -1,0 +1,506 @@
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+:root {
+    --main-padding: 60px;
+    --main-color: #0b8f59;
+    --font-family: "SUSE", sans-serif;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-family);
+    text-transform: capitalize;
+    color: #333;
+}
+ul
+{
+    list-style: none;
+
+}
+a
+{
+    color: black;
+    text-decoration: none;
+}
+.container
+{
+    padding-left:15px ;
+    padding-right:15px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .container
+    {
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container
+    {
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    
+        .container
+        {
+            width: 1170px;
+        } 
+}
+header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo img
+{
+    width: 100px;
+}
+header .container nav
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+@media (min-width:768px) {
+    header .container nav i
+    {
+        display: none;
+    }
+}
+header .container nav ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+@media (max-width:767px)
+{
+    header .container nav ul
+    {
+        display: none;
+    }
+}
+@media (max-width:767px) {
+    header .container nav:hover ul
+    {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: -85px;
+        background-color: var(--main-color);
+        /* color: white; */
+        width: 100px;
+        text-align: center;
+        padding: 10px;
+        z-index: 2;
+    }
+    header .container nav:hover ul li
+    {
+        margin: 15px;
+    }
+    header .container nav:hover ul a
+    {
+        color: white;
+    }
+}
+/* --------------------------------------Strating with landing------------------------------------- */
+.landing
+{
+    padding-bottom: var(--main-padding);
+    
+}
+.landing .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+@media (max-width:767px) {
+    .landing .container
+    {
+        justify-content: center;
+        text-align: center;
+    }
+}
+.landing .text-box {
+    flex: 1;
+}
+
+.landing .container .text-box h1 span
+{
+    color: var(--main-color);
+}
+.landing .container .text-box .buttons-box
+{
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+.landing .container .text-box .buttons-box .active
+{
+    background-color: var(--main-color);
+    color: white;
+    padding:7px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: -8px 3px 8px var(--main-color);
+}
+.landing .container .text-box .buttons-box a
+{
+    display: block;
+    color: var(--main-color);
+    padding: 7px;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.landing .container .text-box .numbers-box
+{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    
+}
+@media (max-width:767px) {
+    .landing .container .text-box .buttons-box,
+    .landing .container .text-box .numbers-box
+    {
+        justify-content: center;
+    }
+}
+.landing .container .text-box .numbers-box .orang ,
+.landing .container .text-box .numbers-box .mColor,
+.landing .container .text-box .numbers-box .green
+{
+    position: relative;
+    z-index: 1;
+}
+.landing .container .text-box .numbers-box .orang span::before,
+.landing .container .text-box .numbers-box .mColor span::before,
+.landing .container .text-box .numbers-box .green span::before
+{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: 0;
+    z-index: -1;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.landing .container .text-box .numbers-box .orang span::before
+{
+    background-color: orange;
+}
+.landing .container .text-box .numbers-box .mColor span::before
+{
+    background-color: var(--main-color);
+
+}
+.landing .container .text-box .numbers-box .green span::before
+{
+
+    background-color: #4dadce;
+
+}
+.landing .container .text-box .numbers-box span
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+.landing .container .text-box .numbers-box h3
+{
+    font-size: 15px;
+    color: #777;
+}
+.landing .container .img-box img
+{
+    max-width: 100%;
+    width: 350px;
+    height: 500px;
+    border-bottom-left-radius:42%;
+}
+@media (max-width:767px) {
+    .landing .container .img-box img
+    {
+        display: none;
+    }
+}
+/* --------------------------------------Strating with About------------------------------------- */
+.about
+{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: #fdfdfd;
+}
+.about .container
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width:767px) {
+    .about .container 
+    {
+        flex-direction: column;
+    }
+}
+.about .container  h1
+{
+    order: 2;
+    flex-basis: 50%;
+}
+.about .container  a
+{
+    display: block;
+    width: fit-content;
+    background-color: var(--main-color);
+    color: white;
+    padding:7px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: -8px 3px 8px var(--main-color);
+    margin-top: 20px;
+}
+.about .container .holder{
+    margin-top: 40px;
+}
+.about .container .holder .img-container img
+{
+    max-width: 100%;
+    width: 350px;
+    height: 500px;
+    border-top-right-radius:42%;
+}
+@media (max-width:767px) {
+    .about .container .img-container img
+    {
+        display: none;
+    }
+}
+.about .container  .About-info p 
+{
+    position: relative;
+    margin: 40px;
+    z-index: 1;
+    counter-increment: inc;
+}
+.about .container  .About-info p::before
+{
+    content: '0' counter(inc);
+    position: absolute;
+    background-color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    top: -10px;
+    left: -50px;
+    text-align: center;
+    line-height: 2;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.about .container  .About-info .orange::before
+{
+    background-color: orange;
+}
+.about .container .About-info .main::before
+{
+    background-color: var(--main-color);
+}
+.about .container  .About-info .blue::before
+{
+    background-color: #4dadce;
+}
+/* --------------------------------------Strating with Eng------------------------------------- */
+.Eng
+{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    text-align: center;
+    
+}
+.Eng .boxes-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(315px,1fr));
+    gap: 2%;
+    margin-top: 40px;
+}
+.Eng .boxes-container .box
+{
+    box-shadow: 3px 2px 14px #ebebeb;
+    padding-block: 15px;
+    transition: 0.3s;
+}
+.Eng .boxes-container .box:hover
+{
+    transform: translateY(-10px);
+}
+.Eng .boxes-container .box img
+{
+    max-width: 100%;
+    width: 100px;
+    margin-bottom: 3%;
+}
+.Eng .boxes-container .box .text h3
+{
+    margin-bottom: 3%;
+}
+.Eng .boxes-container .box .text p
+{
+    margin-bottom: 3%;
+}
+.Eng .boxes-container .box .text span
+{
+    display: block;
+    color: var(--main-color);
+    padding-block: 15px ;
+}
+.Eng .container .buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    margin-top: 5%;
+}
+.Eng .container .buttons a
+{
+    display: block;
+    width: fit-content;
+    border-radius: 50%;
+    padding: 1.5%;
+    background-color: white;
+
+}
+.Eng .container .buttons .active
+{
+    background-color: var(--main-color);
+    color: white;
+}
+/* --------------------------------------Strating with Feed-------------------------------------  */
+.Feed
+{
+    background-image: url("../img/feedback.jpg");
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    z-index: 1;
+    padding-bottom: var(--main-padding);
+}
+.Feed::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 70%);
+    z-index: -1;
+}
+.Feed .main-heading
+{
+    padding-top: var(--main-padding);
+    margin-bottom: 5%;
+}
+.Feed ul li
+{
+    padding-block: 3%;
+}
+/* --------------------------------------Strating with contact us------------------------------------  */
+.Contact
+{
+    padding-block: var(--main-padding);
+    text-align: center;
+}
+.Contact .main-heading
+{
+    padding-bottom: var(--main-padding);
+}
+.Contact .container
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media (max-width:767px) {
+    .Contact .container
+    {
+        flex-direction: column-reverse;
+    }
+}
+.Contact .container form
+{
+    display: flex;
+    flex-direction: column;
+}
+.Contact .container form input
+{
+    margin-top: 10%;
+    border: none;
+    border-bottom: 1px solid;
+    position: relative;
+    caret-color: var(--main-color);
+    padding: 10px;
+}
+.Contact .container form #sub
+{
+    width: fit-content;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--main-color);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.Contact .container img
+{
+    max-width: 100%;
+    width: 45%; 
+}
+
+@media (max-width:767px) {
+    .Contact .container img
+    {
+        margin-bottom: 10%;
+    }
+}
+
+footer
+{
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 2%;
+}
+footer span
+{
+    font-style: italic;
+    font-weight: bold;
+}
